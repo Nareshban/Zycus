@@ -1,4 +1,4 @@
-FROM centos:6
+FROM centos:6 #
 CMD ["wget" ,"https://www.python.org/ftp/python/2.7.1/Python-2.7.1.tgz"]
 CMD ["tar", "-zxvf" ,"Python-2.7.1.tgz"] 
 CMD ["cd", "Python-2.7.1"]
@@ -10,3 +10,6 @@ RUN yum -y install mongodb-org
 RUN yum install httpd tomcat tomcat-webapps tomcat-admin-webapps  tomcat-docs-webapp tomcat-javadoc
 
 EXPOSE 8080
+
+docker build --name DEMO
+docker run -it  -p 7080:8080 DEMO
