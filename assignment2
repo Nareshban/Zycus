@@ -1,0 +1,6 @@
+#!/bin/ksh
+ARG_LIST=$1
+for i in `echo $ARG_LIST | tr ',' ' '`
+do
+   ssh  $i -n "echo $i"
+done
