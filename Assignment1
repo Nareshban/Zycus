@@ -12,5 +12,5 @@ Dockerfile
 
   EXPOSE 8080
 
-docker build --name DEMO
-docker run -it  -p 7080:8080 DEMO
+docker build .
+docker run -it  -p 7080:8080 
